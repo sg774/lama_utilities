@@ -256,7 +256,7 @@ void MapBuilder::grow(const sensor_msgs::LaserScan& scan)
       ROS_DEBUG_STREAM("Frame " << scan.header.frame_id << " has no parent");
       return;
     }
-    world_frame_id_ = getWorldFrame(tf_listerner_, scan.header.frame_id);
+    world_frame_id_ = "map";
     ROS_INFO_STREAM("Found world frame " << world_frame_id_);
     has_frame_id_ = true;
 
