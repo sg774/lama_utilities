@@ -305,6 +305,7 @@ void MapBuilder::grow(const sensor_msgs::LaserScan& scan)
   // Map position relative to initialization.
   const double x = new_tr.getOrigin().x() - xinit_;
   const double y = new_tr.getOrigin().y() - yinit_;
+
   const double theta = angleFromQuaternion(new_tr.getRotation());
 
   // Get the pixel displacement of the map.
